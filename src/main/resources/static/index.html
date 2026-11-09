@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SmartSpend | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="index.html">
+  <div class="layout">
+    <aside class="sidebar">
+      <a class="brand" href="index.html"><span class="brand-mark">S</span>SmartSpend</a>
+      <div class="nav-caption">Workspace</div>
+      <nav class="nav-links"></nav>
+      <div class="sidebar-foot">A little more clarity for every rupee.<br>Plan well. Spend mindfully.</div>
+    </aside>
+    <div class="main-panel">
+      <header class="topbar">
+        <div><div class="eyebrow">Personal finance</div><h1>Dashboard</h1></div>
+        <label class="month-select">REPORTING MONTH<input id="month-filter" type="month"></label>
+      </header>
+      <main class="content">
+        <div class="welcome">
+          <div><h2 id="welcome-title">Your money, in focus.</h2><p>A clear view of your monthly budget and spending.</p></div>
+          <a class="button" href="expenses.html">＋ Add spending</a>
+        </div>
+        <section class="stats-grid" id="dashboard-stats"></section>
+        <section class="charts-grid">
+          <article class="panel chart-panel"><div class="panel-head"><div><h2>Spending mix</h2><p class="panel-subtitle">Where your money went</p></div></div><div class="chart-box"><canvas id="spending-chart"></canvas></div></article>
+          <article class="panel chart-panel"><div class="panel-head"><div><h2>Allocated vs spent</h2><p class="panel-subtitle">Category comparison</p></div></div><div class="chart-box"><canvas id="comparison-chart"></canvas></div></article>
+          <article class="panel chart-panel"><div class="panel-head"><div><h2>Budget utilization</h2><p class="panel-subtitle">For this month</p></div></div><div class="chart-box"><canvas id="utilization-chart"></canvas></div></article>
+        </section>
+        <section class="panel">
+          <div class="panel-head"><div><h2>Category budgets</h2><p class="panel-subtitle">Your monthly progress at a glance</p></div><a class="button secondary small" href="summary.html">View summary →</a></div>
+          <div class="category-grid" id="dashboard-categories"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <div class="toast-region" id="toast-region"></div>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

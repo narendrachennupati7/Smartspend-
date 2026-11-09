@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SmartSpend | Budget summary</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="summary.html">
+  <div class="layout"><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">S</span>SmartSpend</a><div class="nav-caption">Workspace</div><nav class="nav-links"></nav><div class="sidebar-foot">A little more clarity for every rupee.<br>Plan well. Spend mindfully.</div></aside>
+    <div class="main-panel"><header class="topbar"><div><div class="eyebrow">The bigger picture</div><h1>Budget summary</h1></div><label class="month-select">REPORTING MONTH<input id="month-filter" type="month"></label></header>
+      <main class="content"><div class="welcome"><div><h2>Know where you stand.</h2><p>Allocated, spent, and remaining for every category.</p></div><a class="button secondary" href="budget.html">Manage allocations</a></div>
+        <section class="stats-grid" id="summary-stats"></section>
+        <section class="panel"><div class="panel-head"><div><h2>Monthly category breakdown</h2><p class="panel-subtitle">Remaining is capped at ₹0 when a budget is exceeded</p></div></div><div class="table-wrap"><table><thead><tr><th>Category</th><th>Allocated</th><th>Spent</th><th>Remaining</th><th>Exceeded</th><th>Utilization</th><th>Status</th></tr></thead><tbody id="summary-rows"></tbody></table></div></section>
+      </main>
+    </div>
+  </div><div class="toast-region" id="toast-region"></div><script src="js/app.js"></script><script src="js/summary.js"></script>
+</body></html>

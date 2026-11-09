@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>SmartSpend | Spending history</title><link rel="stylesheet" href="css/style.css"></head>
+<body data-page="history.html">
+  <div class="layout"><aside class="sidebar"><a class="brand" href="index.html"><span class="brand-mark">S</span>SmartSpend</a><div class="nav-caption">Workspace</div><nav class="nav-links"></nav><div class="sidebar-foot">A little more clarity for every rupee.<br>Plan well. Spend mindfully.</div></aside>
+    <div class="main-panel"><header class="topbar"><div><div class="eyebrow">Everyday details</div><h1>Spending history</h1></div><label class="month-select">REPORTING MONTH<input id="month-filter" type="month"></label></header>
+      <main class="content"><div class="welcome"><div><h2>All the little things add up.</h2><p>Review and update expenses from the selected month.</p></div><a class="button" href="expenses.html">＋ Add spending</a></div>
+        <section class="panel"><div class="panel-head"><div><h2>Transactions</h2><p class="panel-subtitle" id="history-total">Loading expenses…</p></div><div class="toolbar"><select id="history-category" class="filter-input" style="width:auto;min-width:160px"><option value="">All categories</option></select></div></div>
+          <div class="table-wrap"><table><thead><tr><th>Expense</th><th>Category</th><th>Date</th><th>Description</th><th class="text-right">Amount</th><th></th></tr></thead><tbody id="history-rows"></tbody></table></div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <dialog class="dialog" id="edit-expense-dialog"><div class="dialog-head"><div><h2>Edit expense</h2><p class="panel-subtitle">Update the transaction details</p></div><button class="button secondary small" type="button" id="close-edit">Close</button></div>
+    <form id="edit-expense-form"><input id="edit-expense-id" type="hidden"><div class="form-grid"><div class="field"><label for="edit-expense-title">Title</label><input id="edit-expense-title" maxlength="150" required></div><div class="field"><label for="edit-expense-category">Category</label><select id="edit-expense-category" required></select></div><div class="field"><label for="edit-expense-amount">Amount (₹)</label><input id="edit-expense-amount" type="number" min="0.01" step="0.01" required></div><div class="field"><label for="edit-expense-date">Date</label><input id="edit-expense-date" type="date" required></div><div class="field full"><label for="edit-expense-description">Description</label><textarea id="edit-expense-description" maxlength="500"></textarea></div></div><div class="form-actions"><button class="button" type="submit">Save changes</button></div></form>
+  </dialog>
+  <div class="toast-region" id="toast-region"></div><script src="js/app.js"></script><script src="js/history.js"></script>
+</body></html>

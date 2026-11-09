@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run SmartSpend (demo database)",
+			"type": "shell",
+			"command": "powershell.exe",
+			"args": [
+				"-NoProfile",
+				"-File",
+				"${workspaceFolder}\\scripts\\run-demo.ps1"
+			],
+			"isBackground": true
+		}
+	]
+}
